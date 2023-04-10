@@ -1,6 +1,9 @@
 <template>
   <div>
-    <!--    路由出口-->
-    <NuxtPage />
+    <NuxtLayout>
+      <!--    路由出口-->
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
+<script setup lang="ts"></script>
