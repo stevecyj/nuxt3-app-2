@@ -12,6 +12,9 @@ devDependencies:
   '@nuxtjs/tailwindcss':
     specifier: ^6.6.5
     version: 6.6.5(webpack@5.78.0)
+  '@vant/nuxt':
+    specifier: ^1.0.0
+    version: 1.0.0(vant@4.1.2)
   add:
     specifier: ^2.0.6
     version: 2.0.6
@@ -1138,6 +1141,32 @@ packages:
       '@unhead/shared': 1.1.25
       hookable: 5.5.3
       unhead: 1.1.25
+      vue: 3.2.47
+    dev: true
+
+  /@vant/nuxt@1.0.0(vant@4.1.2):
+    resolution: {integrity: sha512-PCoIMCgl4Srh1ELTlVBvUIvF43/yyhO83ZYeMYbFA9H5t52JU3tvkKU1iRYQUxhKygAQ4HQtm8MqCo/pPb8lhA==}
+    peerDependencies:
+      vant: '>=4'
+    dependencies:
+      '@nuxt/kit': 3.3.3
+      magic-string: 0.29.0
+      unplugin: 1.3.1
+      vant: 4.1.2(vue@3.2.47)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /@vant/popperjs@1.3.0:
+    resolution: {integrity: sha512-hB+czUG+aHtjhaEmCJDuXOep0YTZjdlRR+4MSmIFnkCQIxJaXLQdSsR90XWvAI2yvKUI7TCGqR8pQg2RtvkMHw==}
+    dev: true
+
+  /@vant/use@1.5.1(vue@3.2.47):
+    resolution: {integrity: sha512-Zxd7lDz/LliVYEQi3PR9a8CQa/kGCVzF0u9hqDMaTlgXlbG0wHMFPllrcG0ThR6bfs8xrYVuSFM9pJn6HSoUGQ==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
       vue: 3.2.47
     dev: true
 
@@ -3491,6 +3520,13 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
+  /magic-string@0.29.0:
+    resolution: {integrity: sha512-WcfidHrDjMY+eLjlU+8OvwREqHwpgCeKVBUpQ3OhYYuvfaYCUgcbuBzappNzZvg/v8onU3oQj+BYpkOJe9Iw4Q==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
+
   /magic-string@0.30.0:
     resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
     engines: {node: '>=12'}
@@ -5528,6 +5564,16 @@ packages:
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    dev: true
+
+  /vant@4.1.2(vue@3.2.47):
+    resolution: {integrity: sha512-iRUYBR5zDbs7O0UTxauyW/0XbJoE0g/eHipn0y3QxXeazdmNiaV0kGbBKRJ8vE/7p74zila/O5LzDiYbPDDN7Q==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@vant/popperjs': 1.3.0
+      '@vant/use': 1.5.1(vue@3.2.47)
+      vue: 3.2.47
     dev: true
 
   /vary@1.1.2:

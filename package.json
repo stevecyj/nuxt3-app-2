@@ -12,6 +12,7 @@
   "devDependencies": {
     "@huntersofbook/naive-ui-nuxt": "^0.7.1",
     "@nuxtjs/tailwindcss": "^6.6.5",
+    "@vant/nuxt": "^1.0.0",
     "add": "^2.0.6",
     "nuxt": "^3.3.3",
     "sass": "^1.61.0"
