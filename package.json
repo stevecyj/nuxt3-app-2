@@ -10,7 +10,8 @@
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json,scss} --config ./.prettierrc"
   },
   "devDependencies": {
-    "nuxt": "^3.3.3"
+    "nuxt": "^3.3.3",
+    "sass": "^1.61.0"
   },
   "dependencies": {
     "prettier": "^2.8.7"
