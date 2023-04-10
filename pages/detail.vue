@@ -1,4 +1,6 @@
 <template>
-  <div>Detail Page</div>
-  <NuxtLink to="/">Index Page</NuxtLink>
+  <div>
+    <h1>Detail Page</h1>
+    <NuxtPage></NuxtPage>
+  </div>
 </template>
