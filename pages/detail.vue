@@ -1,6 +1,12 @@
 <template>
-  <div>
-    <h1>Detail Page</h1>
+  <div class="p-5">
+    <h1 class="text-2xl">{{ title }}</h1>
+    <div v-html="content"></div>
     <NuxtPage></NuxtPage>
   </div>
 </template>
+
+<script setup lang="ts">
+const router = useRoute();
+const { title, content } = await $fetch(`/api/detail/${router.params.id}`);
+</script>
