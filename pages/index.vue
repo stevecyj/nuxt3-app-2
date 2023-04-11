@@ -9,4 +9,7 @@
     <LazyVanButton type="default">lazy button</LazyVanButton>
   </div>
   <NuxtLink to="/detail/1">Detail Page</NuxtLink>
+  |
+  <NuxtLink to="/hello">Hello Nuxt3</NuxtLink>
 </template>
+<script setup lang="ts"></script>
