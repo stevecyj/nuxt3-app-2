@@ -14,6 +14,11 @@
       |
       <NuxtLink to="/hello">Hello Nuxt3</NuxtLink>
     </div>
+    <!--    pagination-->
+    <div>
+      <van-button @click="prev">prev</van-button>
+      <VanButton @click="next">next</VanButton>
+    </div>
     <!--    處理請求錯誤-->
     <div v-if="error" class="text-red-300">{{ error.message }}</div>
     <!--    處理 loading-->
@@ -29,5 +34,21 @@
   </div>
 </template>
 <script setup lang="ts">
-const { data: posts, pending, error } = await useFetch('/api/posts');
+const page = ref(1);
+const {
+  data: posts,
+  pending,
+  error,
+  refresh,
+} = await useFetch(() => `/api/posts?page=${page.value}&size=2`);
+
+function prev() {
+  page.value--;
+  refresh();
+}
+
+function next() {
+  page.value++;
+  refresh();
+}
 </script>

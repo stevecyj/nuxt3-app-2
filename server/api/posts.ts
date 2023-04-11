@@ -6,6 +6,10 @@ import matter from 'gray-matter';
 const postDir = path.join(process.cwd(), 'content');
 
 export default defineEventHandler((event) => {
+  // 取得當前頁碼
+  const query = getQuery(event);
+  const page = Number(query.page);
+  const size = Number(query.size);
   const fileNames = fs.readdirSync(postDir);
   const posts = fileNames.map((fileName) => {
     //   取得文件名作為文章標題
@@ -20,6 +24,8 @@ export default defineEventHandler((event) => {
     return { id, title: matterInfo.data.title, date: fileInfo.ctime };
   });
 
-  // 降序排列
-  return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  // 降序排列, 分頁
+  const start = (page - 1) * size;
+  const end = start + size;
+  return posts.sort((a, b) => (a.date < b.date ? 1 : -1)).slice(start, end);
 });
