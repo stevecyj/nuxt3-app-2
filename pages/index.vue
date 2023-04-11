@@ -14,14 +14,20 @@
       |
       <NuxtLink to="/hello">Hello Nuxt3</NuxtLink>
     </div>
-    <div v-for="post in posts" :key="post.id">
-      <NuxtLink class="text-lg" :to="`/detail/${post.id}`">{{
-        post.title
-      }}</NuxtLink>
-      <p class="text-slate-500">發佈於： {{ post.date }}</p>
+    <!--    處理請求錯誤-->
+    <div v-if="error" class="text-red-300">{{ error.message }}</div>
+    <!--    處理 loading-->
+    <div v-if="pending">Loading ...</div>
+    <div v-else>
+      <div v-for="post in posts" :key="post.id">
+        <NuxtLink class="text-lg" :to="`/detail/${post.id}`"
+          >{{ post.title }}
+        </NuxtLink>
+        <p class="text-slate-500">發佈於： {{ post.date }}</p>
+      </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-const posts = await $fetch('/api/posts');
+const { data: posts, pending, error } = await useFetch('/api/posts');
 </script>
