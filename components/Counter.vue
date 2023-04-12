@@ -1,6 +1,6 @@
 <template>
-  <div class="p-4">Counter: {{ counter }}</div>
-  <div class="p-4">CounterRef: {{ counter2 }}</div>
+  <div class="p-4">全域 Counter: {{ counter }}</div>
+  <div class="p-4">局部 CounterRef: {{ counter2 }}</div>
   <div class="mt-2">
     <van-button
       @click="

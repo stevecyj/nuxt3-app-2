@@ -16,6 +16,8 @@
       <NuxtLink to="/detail/1">Detail Page</NuxtLink>
       |
       <NuxtLink to="/hello">Hello Nuxt3</NuxtLink>
+      |
+      <NuxtLink to="/counter">Counter</NuxtLink>
     </div>
     <!--    pagination-->
     <div>
