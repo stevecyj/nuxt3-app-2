@@ -34,6 +34,12 @@ const fetchPost = () => $fetch(`/api/detail/${route.params.id}`);
 const { data, pending, error } = await useAsyncData(fetchPost);
 const errorMsg = computed(() => error.value as NuxtError);
 const showErrorMsg = errorMsg.value.data.message;
+watchEffect(() => {
+  if (unref(error)) {
+    //   如果有錯誤物件，展示錯誤頁
+    showError(showErrorMsg);
+  }
+});
 
 // 登錄狀態判斷能否評論
 const value = useState('comment', () => '');
