@@ -1,6 +1,7 @@
 <template>
   <div class="p-5">
-    <div v-if="pending">Loading ...</div>
+    <div v-if="error">{{ showErrorMsg }}</div>
+    <div v-else-if="pending">Loading ...</div>
     <div v-else>
       <h1 class="text-2xl">{{ data?.title }}</h1>
       <div v-html="data?.content"></div>
@@ -26,10 +27,13 @@ p {
 </style>
 <script setup lang="ts">
 import { useUser } from '~/store/user';
+import { NuxtError } from '#app';
 
 const route = useRoute();
 const fetchPost = () => $fetch(`/api/detail/${route.params.id}`);
-const { data, pending } = await useAsyncData(fetchPost);
+const { data, pending, error } = await useAsyncData(fetchPost);
+const errorMsg = computed(() => error.value as NuxtError);
+const showErrorMsg = errorMsg.value.data.message;
 
 // 登錄狀態判斷能否評論
 const value = useState('comment', () => '');
