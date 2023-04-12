@@ -2,6 +2,9 @@
   <div class="flex items-center flex-col gap-2 py-4">
     <h1>Index Page</h1>
     <div>
+      <Counter />
+    </div>
+    <div>
       <NButton>Hello</NButton>
     </div>
     <div>
