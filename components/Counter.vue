@@ -1,24 +1,27 @@
 <template>
   <div class="p-4">Counter: {{ counter }}</div>
-  <div class="p-4">CounterRef: {{ counterRef }}</div>
+  <div class="p-4">CounterRef: {{ counter2 }}</div>
   <div class="mt-2">
     <van-button
       @click="
         counter++;
-        counterRef++;
+        counter2++;
       "
       >+</van-button
     >
     <van-button
       @click="
         counter--;
-        counterRef--;
+        counter2--;
       "
       >-</van-button
     >
   </div>
 </template>
 <script setup lang="ts">
-const counter = useState('counter', () => Math.round(Math.random() * 1000));
-const counterRef = ref(Math.round(Math.random() * 1000));
+// 全域 state
+const counter = useCounter();
+
+// 局部 state
+const counter2 = ref(1);
 </script>
