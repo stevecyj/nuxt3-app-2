@@ -4,5 +4,16 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@huntersofbook/naive-ui-nuxt',
     '@vant/nuxt',
+    // 引入 Pinia
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: [
+          // 自动引入 `defineStore(), storeToRefs()`
+          'defineStore',
+          'storeToRefs',
+        ],
+      },
+    ],
   ],
 });

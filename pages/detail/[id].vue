@@ -25,13 +25,16 @@ p {
 }
 </style>
 <script setup lang="ts">
+import { useUser } from '~/store/user';
+
 const route = useRoute();
 const fetchPost = () => $fetch(`/api/detail/${route.params.id}`);
 const { data, pending } = await useAsyncData(fetchPost);
 
 // 登錄狀態判斷能否評論
 const value = useState('comment', () => '');
-const isLogin = useLogin();
+const store = useUser();
+const { isLogin } = storeToRefs(store);
 const router = useRouter();
 const onSubmit = () => {
   if (isLogin.value) {

@@ -4,7 +4,9 @@
   </div>
 </template>
 <script setup lang="ts">
-const isLogin = useLogin();
+import { useUser } from '~/store/user';
+const store = useUser();
+const { isLogin } = storeToRefs(store);
 const router = useRouter();
 const route = useRoute();
 const onLogin = () => {
