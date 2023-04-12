@@ -45,4 +45,7 @@ const onSubmit = () => {
     router.push('/login?callback=' + route.path);
   }
 };
+
+// 模擬 error
+// foo;
 </script>

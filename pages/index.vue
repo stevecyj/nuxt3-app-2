@@ -18,6 +18,8 @@
       <NuxtLink to="/hello">Hello Nuxt3</NuxtLink>
       |
       <NuxtLink to="/counter">Counter</NuxtLink>
+      |
+      <NuxtLink to="/error">error</NuxtLink>
     </div>
     <!--    pagination-->
     <div>
