@@ -19,8 +19,10 @@
   </div>
 </template>
 <script setup lang="ts">
+import { useCounter } from '~/store/counter';
 // 全域 state
-const counter = useCounter();
+const store = useCounter();
+const { value: counter } = storeToRefs(store);
 
 // 局部 state
 const counter2 = ref(1);

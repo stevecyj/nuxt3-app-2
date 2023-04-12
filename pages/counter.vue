@@ -27,10 +27,12 @@
   </div>
 </template>
 <script setup lang="ts">
+import { useCounter } from '~/store/counter';
 // 局部state
 const counterRef = ref(Math.round(Math.random() * 1000));
 const counter = useState('counter', () => Math.round(Math.random() * 1000));
 
 // 全域state, composable
-const count = useCounter();
+const store = useCounter();
+const { value: count } = storeToRefs(store);
 </script>
