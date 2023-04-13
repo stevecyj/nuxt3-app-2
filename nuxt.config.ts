@@ -1,5 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // @ts-ignore
+  runtimeConfig: {
+    //   只用於 server 的 key
+    apiSecret: '',
+    // client 可訪問
+    public: {
+      apiBase: '',
+    },
+  },
+  // ssr: false,
   modules: [
     '@nuxtjs/tailwindcss',
     '@huntersofbook/naive-ui-nuxt',
