@@ -20,6 +20,8 @@
       <NuxtLink to="/counter">Counter</NuxtLink>
       |
       <NuxtLink to="/error">error</NuxtLink>
+      |
+      <NuxtLink to="/error-handle">error-handle</NuxtLink>
     </div>
     <!--    pagination-->
     <div>
