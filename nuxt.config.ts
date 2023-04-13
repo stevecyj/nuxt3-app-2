@@ -9,6 +9,9 @@ export default defineNuxtConfig({
       apiBase: '',
     },
   },
+  imports: {
+    dirs: ['store/**'],
+  },
   // ssr: false,
   modules: [
     '@nuxtjs/tailwindcss',
