@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
   } catch (error) {
     throw createError({
       statusCode: 404,
-      statusMessage: '文章不存在',
+      statusMessage: 'article does not exist',
       message: '文章不存在',
     });
   }

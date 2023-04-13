@@ -1,6 +1,6 @@
 <template>
   <div class="p-5">
-    <div v-if="error">{{ showErrorMsg }}</div>
+    <div v-if="error">{{ errorMsg }}</div>
     <div v-else-if="pending">Loading ...</div>
     <div v-else>
       <h1 class="text-2xl">{{ data?.title }}</h1>
@@ -38,11 +38,10 @@ const fetchPost = () => $fetch(`/api/detail/${route.params.id}`);
 // 加入 error
 const { data, pending, error } = await useAsyncData(fetchPost);
 const errorMsg = computed(() => error.value as NuxtError);
-const showErrorMsg = errorMsg.value.data.message;
 watchEffect(() => {
   if (unref(error)) {
     //   如果有錯誤物件，展示錯誤頁
-    showError(showErrorMsg);
+    showError(errorMsg.value);
   }
 });
 
