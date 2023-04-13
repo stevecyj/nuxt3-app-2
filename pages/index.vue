@@ -26,6 +26,8 @@
       <NuxtLink to="/config">config</NuxtLink>
       |
       <NuxtLink to="/lifecycle">lifecycle</NuxtLink>
+      |
+      <NuxtLink to="/mid">mid</NuxtLink>
     </div>
     <!--    pagination-->
     <div>
