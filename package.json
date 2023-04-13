@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.8",
+    "dayjs": "^1.11.7",
     "gray-matter": "^4.0.3",
     "pinia": "^2.0.34",
     "prettier": "^2.8.7",

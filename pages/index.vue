@@ -28,6 +28,8 @@
       <NuxtLink to="/lifecycle">lifecycle</NuxtLink>
       |
       <NuxtLink to="/mid">mid</NuxtLink>
+      |
+      <NuxtLink to="/plugin-test">plugin-test</NuxtLink>
     </div>
     <!--    pagination-->
     <div>
