@@ -6,4 +6,10 @@
     </NuxtLayout>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  titleTemplate: (s) => {
+    return s ? `${s} - JOJO's space` : "JOJO's space";
+  },
+});
+</script>

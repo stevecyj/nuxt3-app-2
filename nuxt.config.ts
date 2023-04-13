@@ -1,6 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // @ts-ignore
+  app: {
+    head: {
+      // title: 'space',
+      meta: [
+        { name: 'description', content: 'focus on front end' },
+        { name: 'keywords', content: 'nuxt,vue,ts,frontend' },
+      ],
+    },
+  },
   runtimeConfig: {
     //   只用於 server 的 key
     apiSecret: '',

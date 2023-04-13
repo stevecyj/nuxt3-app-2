@@ -45,6 +45,11 @@
   </div>
 </template>
 <script setup lang="ts">
+//設定標題
+useHead({
+  title: '文章標題',
+});
+
 const page = ref(1);
 const {
   data: posts,

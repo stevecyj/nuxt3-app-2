@@ -30,6 +30,10 @@ import { useUser } from '~/store/user';
 import { NuxtError } from '#app';
 
 const route = useRoute();
+
+useHead({
+  title: route.params.id as string,
+});
 const fetchPost = () => $fetch(`/api/detail/${route.params.id}`);
 // 加入 error
 const { data, pending, error } = await useAsyncData(fetchPost);
