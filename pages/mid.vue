@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
-  middleware(to, from) {
-    console.log('匿名 middleware，具體頁面執行');
-  },
+  // middleware(to, from) {
+  //   console.log('匿名 middleware，具體頁面執行');
+  // },
+
+  middleware: ['amid', 'bmid'],
 });
 </script>
 
