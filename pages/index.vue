@@ -24,6 +24,8 @@
       <NuxtLink to="/error-handle">error-handle</NuxtLink>
       |
       <NuxtLink to="/config">config</NuxtLink>
+      |
+      <NuxtLink to="/lifecycle">lifecycle</NuxtLink>
     </div>
     <!--    pagination-->
     <div>
