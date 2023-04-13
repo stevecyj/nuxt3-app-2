@@ -31,6 +31,7 @@ import { NuxtError } from '#app';
 
 const route = useRoute();
 const fetchPost = () => $fetch(`/api/detail/${route.params.id}`);
+// 加入 error
 const { data, pending, error } = await useAsyncData(fetchPost);
 const errorMsg = computed(() => error.value as NuxtError);
 const showErrorMsg = errorMsg.value.data.message;
