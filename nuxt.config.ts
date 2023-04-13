@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['store/**'],
   },
-  // ssr: false,
+  ssr: false,
   modules: [
     '@nuxtjs/tailwindcss',
     '@huntersofbook/naive-ui-nuxt',
@@ -38,4 +38,5 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  vant: {},
 });
