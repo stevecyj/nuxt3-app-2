@@ -30,6 +30,8 @@
       <NuxtLink to="/mid">mid</NuxtLink>
       |
       <NuxtLink to="/plugin-test">plugin-test</NuxtLink>
+      |
+      <NuxtLink to="/color-mode">color-mode</NuxtLink>
     </div>
     <!--    pagination-->
     <div>
