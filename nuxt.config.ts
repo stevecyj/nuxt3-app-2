@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // @ts-ignore
+  // @ts-expect-error
   app: {
     head: {
       // title: 'space',
@@ -43,4 +43,4 @@ export default defineNuxtConfig({
     preference: 'dark',
   },
   vant: {},
-});
+})

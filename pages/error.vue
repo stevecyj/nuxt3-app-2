@@ -1,1 +1,3 @@
-<template>{{ foo }}</template>
+<template>
+  {{ foo }}
+</template>

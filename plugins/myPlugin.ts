@@ -1,7 +1,7 @@
-import dayjs from 'dayjs';
+import dayjs from 'dayjs'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  console.log(nuxtApp);
+  console.log(nuxtApp)
   //   use lifecycle hook
   // nuxtApp.hook('app:error', (err) => {
   //   //   do
@@ -14,6 +14,6 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   //   provide global prop, method
   nuxtApp.provide('format', (date?: Date, template?: string) => {
-    return dayjs(date).format(template);
-  });
-});
+    return dayjs(date).format(template)
+  })
+})

@@ -1,14 +1,13 @@
 <script lang="ts" setup>
 // get appConfig
-const appConfig = useAppConfig();
+const appConfig = useAppConfig()
 
 // get env
-const runtimeConfig = useRuntimeConfig();
-console.log(runtimeConfig);
+const runtimeConfig = useRuntimeConfig()
+console.log(runtimeConfig)
 
-if (process.server) {
-  console.log('API secret:', runtimeConfig.apiSecret);
-}
+if (process.server)
+  console.log('API secret:', runtimeConfig.apiSecret)
 </script>
 
 <template>

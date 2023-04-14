@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-const instance = getCurrentInstance();
+const instance = getCurrentInstance()
 onMounted(() => {
-  instance?.proxy?.$alert('component mounted!');
-});
+  instance?.proxy?.$alert('component mounted!')
+})
 </script>
 
 <template>
   <div>
-    <NuxtLink to="/">Index Page</NuxtLink>
+    <NuxtLink to="/">
+      Index Page
+    </NuxtLink>
   </div>
 </template>
 

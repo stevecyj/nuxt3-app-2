@@ -1,13 +1,13 @@
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.config.errorHandler = (..._args) => {
-    console.log('vue error handler');
-  };
+    console.log('vue error handler')
+  }
 
   nuxtApp.hook('app:error', (..._args) => {
-    console.log('app:error');
-  });
+    console.log('app:error')
+  })
 
   nuxtApp.hook('vue:error', (..._args) => {
-    console.log('vue:error');
-  });
-});
+    console.log('vue:error')
+  })
+})

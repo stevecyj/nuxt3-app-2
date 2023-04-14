@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <div>
     <NavBar />
@@ -12,6 +15,3 @@
   border-radius: 50%;
 }
 </style>
-<script setup lang="ts">
-import Navbar from '~/components/Nav/Navbar.vue';
-</script>

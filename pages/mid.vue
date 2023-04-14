@@ -5,13 +5,15 @@ definePageMeta({
   // },
 
   middleware: ['amid', 'bmid'],
-});
+})
 </script>
 
 <template>
   <div>
     <h1>Mid Page</h1>
-    <NuxtLink to="/">Index Page</NuxtLink>
+    <NuxtLink to="/">
+      Index Page
+    </NuxtLink>
   </div>
 </template>
 

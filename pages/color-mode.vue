@@ -1,17 +1,27 @@
 <script lang="ts" setup>
-const colorMode = useColorMode();
-console.log(colorMode.preference);
+const colorMode = useColorMode()
+console.log(colorMode.preference)
 </script>
 
 <template>
   <div>
     <h1>Color mode: {{ $colorMode.value }}</h1>
-    <NuxtLink to="/">Index Page</NuxtLink>
+    <NuxtLink to="/">
+      Index Page
+    </NuxtLink>
     <select v-model="$colorMode.preference">
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-      <option value="sepia">Sepia</option>
+      <option value="system">
+        System
+      </option>
+      <option value="light">
+        Light
+      </option>
+      <option value="dark">
+        Dark
+      </option>
+      <option value="sepia">
+        Sepia
+      </option>
     </select>
   </div>
 </template>

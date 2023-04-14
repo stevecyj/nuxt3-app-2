@@ -1,7 +1,7 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="p-5">
-    <NuxtPage></NuxtPage>
+    <NuxtPage />
   </div>
 </template>
-
-<script setup lang="ts"></script>
