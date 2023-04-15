@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const { message } = await $fetch('/api/hello')
 </script>
 
