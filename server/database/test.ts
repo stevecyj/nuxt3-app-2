@@ -22,7 +22,7 @@ async function main() {
     },
   })
 
-  console.log(allUsers)
+  console.dir(allUsers, { depth: null })
 }
 
 main()
