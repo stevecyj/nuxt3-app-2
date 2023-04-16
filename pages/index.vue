@@ -25,7 +25,10 @@ function next() {
 
 <template>
   <div class="flex items-center flex-col gap-2 py-4">
-    <h1>Index Page</h1>
+    <h1 class="bg-blue-200">
+      Index Page
+    </h1>
+    <div class="i-vscode-icons-file-type-nuxt" />
     <div>
       <Counter />
     </div>
