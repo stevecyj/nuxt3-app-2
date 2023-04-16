@@ -15,6 +15,13 @@ async function main() {
   //     },
   //   },
   // })
+
+  const post = await prisma.post.update({
+    where: { id: 1 },
+    data: { published: true },
+  })
+  console.log(post)
+
   // 查询所有用户
   const allUsers = await prisma.user.findMany({
     include: {
