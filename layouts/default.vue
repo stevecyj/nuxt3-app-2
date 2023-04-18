@@ -1,17 +1,9 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <div>
-    <NavBar />
-    <slot />
+  <div class="min-w-[1024px] bg-gray-100 flex flex-col min-h-screen">
+    <MyHeader />
+    <main class="container m-auto mt-20">
+      <slot />
+    </main>
+    <MyFooter />
   </div>
 </template>
-
-<style scoped>
-.avatar {
-  width: 50px;
-  border: 1px solid rgb(218, 218, 218);
-  border-radius: 50%;
-}
-</style>
