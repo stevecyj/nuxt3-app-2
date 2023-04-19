@@ -36,7 +36,7 @@ function next() {
       <NButton>Hello</NButton>
     </div>
     <div>
-      <van-button type="primary" @click="showToast('toast')">
+      <van-button type="primary" @click="showToast({ message: 'Toast', position: 'top' })">
         button
       </van-button>
       <VanButton type="success" @click="showNotify('notify')">
